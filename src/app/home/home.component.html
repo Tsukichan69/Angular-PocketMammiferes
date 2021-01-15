@@ -1,0 +1,6 @@
+<div class="container-fluid">
+  <div class="row">
+    <app-animal (demandeSuppression) ="demandeSuppressionAnimal(unAnimal)"
+    *ngFor="let unAnimal of tabAnimaux"[animal]="unAnimal"></app-animal>
+  </div>
+</div>

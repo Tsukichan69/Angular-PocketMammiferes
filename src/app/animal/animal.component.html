@@ -1,0 +1,12 @@
+<div class="card mammifere">
+  <img
+    class="card-img-top"
+    src="{{ animal.getImage() }}"
+    alt="{{ animal.getNom() }}"
+  />
+  <div class="card-body">
+    <h5 class="card-title">{{ animal.getNom() }}</h5>
+		<p class="card-text">Ordre des {{ animal.getOrdre() }}</p>
+  </div>
+	<button (click) = "supprimerAnimal()" type="button" class="btn btn-danger">Supprimer</button>
+</div>
