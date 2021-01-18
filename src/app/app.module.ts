@@ -12,6 +12,7 @@ import { LayoutComponent } from './layout/layout.component';
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AnimalComponent } from './animal/animal.component';
+import { FormComponent } from './form/form.component';
 
 @NgModule({
   imports: [
@@ -26,7 +27,8 @@ import { AnimalComponent } from './animal/animal.component';
     LayoutComponent,
     HomeComponent,
     NavbarComponent,
-    AnimalComponent
+    AnimalComponent,
+    FormComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
