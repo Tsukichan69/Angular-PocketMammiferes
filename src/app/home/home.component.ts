@@ -36,4 +36,7 @@ export class HomeComponent implements OnInit {
     let positionAnimalDansTab = this.tabAnimaux.indexOf(AnimalAsupprimer);
     this.tabAnimaux.splice(positionAnimalDansTab,1);
   }
+  demandeAjout(animalAAjouter : Animal) {
+    this.tabAnimaux.push(animalAAjouter);
+  }
 }

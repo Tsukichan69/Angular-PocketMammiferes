@@ -1,10 +1,10 @@
 <h4>Ajoutez votre propre animal favoris !</h4>
-<form>
+<form #ajoutForm="ngForm" (ngSubmit)="ajoutAnimal()">
   <div class="form-group">
     <label for="formGroupExampleInput">Nom</label>
-    <input type="text" class="form-control" id="nom" placeholder="Chat">
+    <input type="text" class="form-control" id="nom" placeholder="Chat" [(ngModel)]="nom" name="nom">
   </div>
-	<select class="custom-select">
+	<select class="custom-select" [(ngModel)]="ordre" name="ordre">
 		<option value="Monotrèmes">Monotrèmes</option>
 		<option value="Marsupiaux">Marsupiaux</option>
 		<option value="Xénarthres">Xénarthres</option>
@@ -18,6 +18,7 @@
 	</select>
   <div class="form-group">
     <label for="formGroupExampleInput2">Image</label>
-    <input type="url" class="form-control" id="image" placeholder="http://placekitten.com/200/300">
-  </div>
+    <input type="url" class="form-control" id="image" placeholder="http://placekitten.com/200/300" [(ngModel)]="image" name="image">
+	</div>
+  <button type="submit" class="btn btn-primary">Submit</button>
 </form>
