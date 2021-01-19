@@ -3,6 +3,9 @@
     <app-animal (demandeSuppression) ="demandeSuppressionAnimal(unAnimal)"
     *ngFor="let unAnimal of tabAnimaux"[animal]="unAnimal"></app-animal>
   </div>
-  <app-form (demandeAjout)="demandeAjout($event)"></app-form>
+  <app-form 
+  [modeEdition]="modeEdition"
+  [animalModifie]="animalModifie"
+  (demandeAjout)="demandeAjout($event)"></app-form>
 </div>
 

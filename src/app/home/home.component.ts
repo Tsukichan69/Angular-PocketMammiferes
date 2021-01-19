@@ -17,6 +17,9 @@ export class HomeComponent implements OnInit {
   public kangourou: Animal;
   public vache: Animal;
 
+  public modeEdition : boolean = false;
+  public animalModifie : Animal;
+
   constructor() {
     this.ornithorynque = new Animal("Monotrèmes", "Ornithorynque", "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.ytimg.com%2Fvi%2FxuRvw3WQDkc%2Fmaxresdefault.jpg&f=1&nofb=1");
     this.lapin = new Animal("Lagomorphes", "Lapin", "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.4C6eiULamSW7ce_D3anVPgHaHa%26pid%3DApi&f=1");
@@ -38,5 +41,9 @@ export class HomeComponent implements OnInit {
   }
   demandeAjout(animalAAjouter : Animal) {
     this.tabAnimaux.push(animalAAjouter);
+  }
+  demandeEditionAnimal(animalAModifier : Animal) {
+    this.modeEdition = true;
+    this.animalModifie = animalAModifier;
   }
 }

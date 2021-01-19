@@ -12,6 +12,9 @@ export class AnimalComponent implements OnInit {
 
   @Output()
   private demandeSuppression : EventEmitter<any>;
+  
+  @Output ()
+  private demandeEdition : EventEmitter<any>;
 
   constructor() {
     this.demandeSuppression = new EventEmitter<any>();
@@ -20,5 +23,8 @@ export class AnimalComponent implements OnInit {
   }
   supprimerAnimal() {
     this.demandeSuppression.emit();
+  }
+  editerAnimal() {
+    this.demandeEdition.emit();
   }
 }
